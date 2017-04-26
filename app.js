@@ -16,5 +16,4 @@ $( document ).ready(function() {
           var searchBox = new google.maps.places.SearchBox(input);
           map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
-  
   //google.maps.event.addDomListener(window, 'load', init);

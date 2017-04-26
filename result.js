@@ -1,3 +1,5 @@
+var search_string;
+
 $( document ).ready(function() {
 
 
@@ -6,7 +8,7 @@ $( document ).ready(function() {
       var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
       return results[1] || 0;
   }
-  var search_string = $.urlParam('search');
+  search_string = $.urlParam('search');
 
 });
 
@@ -29,6 +31,7 @@ function initAutocomplete() {
   // Create the search box and link it to the Unidentified Input (UI) element - pac-input or gogoleMap
   var input = document.getElementById('pac-input');
   var searchBox = new google.maps.places.SearchBox(input);
+  searchBox.value =
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
   // Bias the SearchBox results towards current map's viewport.
