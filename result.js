@@ -28,10 +28,12 @@ function initAutocomplete() {
     mapTypeId: 'roadmap'
   });
 
+$("#pac-input").attr("value", search_string);
   // Create the search box and link it to the Unidentified Input (UI) element - pac-input or gogoleMap
   var input = document.getElementById('pac-input');
   var searchBox = new google.maps.places.SearchBox(input);
-  searchBox.value =
+  //searchBox.value =search_string;
+
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
   // Bias the SearchBox results towards current map's viewport.
@@ -87,4 +89,7 @@ function initAutocomplete() {
     });
     map.fitBounds(bounds);
   });
+
+
+
 }
