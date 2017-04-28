@@ -14,7 +14,7 @@ $( document ).ready(function() {
       return results[1] || 0;
   }
   search_string = $.urlParam('search');
-
+  $("#autocomplete").attr("value", search_string);
 });
 
 
